@@ -1,0 +1,51 @@
+*{
+	font-family: arial;
+}
+
+.save{
+	width: 100%;
+	cursor: pointer;
+	background-color: #09d1f4;
+	border-radius: 5px;
+	border: solid;
+	border-width: 1px;
+}
+
+.sbutton{
+	cursor: pointer;
+	background-color: #09d1f4;
+	border-radius: 5px;
+	border: solid;
+	border-width: 1px;
+}
+
+.critical{
+	color:#D2042D;
+	font-weight: bolder;
+}
+
+.delete{
+	cursor: pointer;
+	background-color: #D2042D;
+	border-radius: 5px;
+	border: solid;
+	border-width: 1px;
+	font-weight: bolder;
+}
+
+.link{
+	text-decoration: none;
+	color: black;
+}
+
+table{
+	border-radius: 10px;
+}
+
+th{
+	border: none;
+}
+
+input{
+	border-radius: 5px;
+}

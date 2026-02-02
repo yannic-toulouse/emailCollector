@@ -1,5 +1,6 @@
 <?php
-
-$usedob = 'Yes';
+namespace secure;
+$usedob = true;
+$selectedFile = 'liste2.csv';
 
 ?>

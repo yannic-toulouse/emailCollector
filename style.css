@@ -1,46 +1,153 @@
-*{
-	font-family: arial;
+/* General Reset */
+* {
+    box-sizing: border-box;
 }
 
-.save{
-	width: 100%;
-	cursor: pointer;
-	background-color: #09d1f4;
-	border-radius: 5px;
-	border: solid;
-	border-width: 1px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-.sbutton{
-	cursor: pointer;
-	background-color: #09d1f4;
-	border-radius: 5px;
-	border: solid;
-	border-width: 1px;
+/* Headings */
+.main-header {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.delete{
-	cursor: pointer;
-	background-color: #D2042D;
-	border-radius: 5px;
-	border: solid;
-	border-width: 1px;
-	font-weight: bolder;
+h1{
+    margin-bottom: 1rem;
 }
 
-.link{
-	text-decoration: none;
-	color: black;
+/* Table Container (for responsiveness) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    background-color: #fff;
+    margin-bottom: 2rem;
 }
 
-table{
-	border-radius: 10px;
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+    vertical-align: top;
 }
 
-th{
-	border: none;
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
 }
 
-input{
-	border-radius: 5px;
+/* Input fields inside table cells */
+td input[type="text"],
+td input[type="email"],
+td input[type="name"] {
+    width: 100%;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+/* Buttons */
+button.save,
+input.save,
+button.sbutton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+button.save:hover,
+input.save:hover,
+button.sbutton:hover {
+    background-color: #45a049;
+}
+
+/* Dashboard link styling */
+a.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.critical {
+    color: red;
+    font-weight: bold;
+}
+
+button.critical{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+button.sbutton {
+    background-color: #007BFF;
+    margin-top: 1rem;
+}
+
+.asterisk{
+    color: red;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    .headerRow {
+        display: none;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        background: #fff;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        left: 0.5rem;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #555;
+    }
+
+    td:nth-of-type(1):before { content: "Lfd. Nr."; }
+    td:nth-of-type(2):before { content: "Schüler Vorname"; }
+    td:nth-of-type(3):before { content: "Schüler Nachname"; }
+    td:nth-of-type(4):before { content: "Elternteil 1 Name*"; }
+    td:nth-of-type(5):before { content: "Elternteil 1 E-Mail*"; }
+    td:nth-of-type(6):before { content: "Elternteil 2 Name"; }
+    td:nth-of-type(7):before { content: "Elternteil 2 E-Mail"; }
+    td:nth-of-type(8):before { content: "Aktion"; }
 }
